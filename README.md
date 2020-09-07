@@ -17,3 +17,5 @@ Installation:
 To execute the the provided example:
 
 `npm run example`  
+
+Then, open the file inside dist/bundle.js in a browser.
