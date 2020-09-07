@@ -1,0 +1,41 @@
+{
+  "name": "luque-pack",
+  "version": "0.0.1",
+  "description": "A very very simple Javascript bundler.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "example": "node ./src/index.js -c luquepack.example.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-env": "^2.4.1",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0",
+    "commander": "^6.1.0",
+    "js-beautify": "^1.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
+    ]
+  }
+}
