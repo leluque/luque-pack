@@ -1,6 +1,6 @@
 ## LuquePack
 
-A very very simple Javascript bundler used to show students the general ideal of webpack.
+A very very simple Javascript bundler used to show students the general ideal behind webpack.
 
 ## Project Status
 
